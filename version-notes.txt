@@ -1,0 +1,38 @@
+COMMENTS
+--------
+- Can be packaged with windows correctly (make sure Developer mode in main.js is disabled "===")
+- Created docstrings for all python functions and files.
+- Organized jsfiles + wrote some JSDoc COMMENTS
+- bin with ffmpeg files needs to be (and is placed) in 'backend' now
+
+
+IN DEVELOPMENT
+--------------
+PYTHON:
+- helpers.py
+    Need to fix smpte order function
+- core_functions.py
+    Need to correct the convert function
+    Need to create new functions (QC, ..)
+- Create venv ??
+- Create __init__ packaging ??
+
+ELECTRON:
+- Need to fix operation-started / operation-finished
+- Modal improvement ??
+- Create custom icon
+- Modify MENU
+
+GENERAL:
+- Need to check python __init__ packaging and if it works
+- Need to check 'Electron Forge' process (it's the new way of packaging in Electron)
+
+
+WHEN PACKAGING
+--------------
+- Ensure Developer Mode is disabled in main.js "isDev"
+- Ensure main.js paths are correctly referencing the files
+- Package python file using "pyinstall project.py --onedir 
+  and then move it to "dist folder" along with the "bin" folder
+- Update build.js and package.json before using Electron-packager
+- run: node build.js to build program.

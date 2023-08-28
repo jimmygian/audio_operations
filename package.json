@@ -1,0 +1,19 @@
+{
+  "name": "audio_operations",
+  "productName": "Audio-Operations",
+  "version": "1.0.0",
+  "description": "Basic",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Dimitris Giannoulis",
+  "license": "ISC",
+  "dependencies": {
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "electron": "^26.1.0",
+    "electron-packager": "^17.1.2"
+  }
+}

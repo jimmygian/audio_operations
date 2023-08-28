@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- This is needed for flexible Apps (mobile/different devices) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- This is needed for Electron Apps -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- Bootstrap's and custom css / js files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/renderer.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+
+    <!-- Title -->
+    <title>AUDIO OPERATIONS - Dimitris Giannoulis</title>
+  </head>
+
+  <!-- BODY STARTS HERE -->
+  <body class="bg-dark text-light">
+
+    <!-- Container that contains all elements of page -->
+    <div class="container text-center my-5">
+      
+      <!-- Top Title -->
+      <h1 class="display-3 pb-5 mb-4">Audio Operations</h1>
+      
+      
+      <!-- FORM STARTS HERE -->
+      <form id="fileProcessingForm">
+
+        <!-- Drag n Drop Area / Text -->
+        <div id="dragDropBox" class="container-fluid bg-dark-subtle bg-gradient rounded">    
+          <!-- Clickable divs (hidden in css file - visible only when mouse is over dragDropBox) -->
+          <div class="row">
+            <div id="inFile" class="col p-5">
+              Select File
+            </div>
+            <div id="inFolder" class="col p-5">
+              Select Folder
+            </div>
+          </div>
+          <!-- Text inside dragDropBox -->
+          <p id="dragDropBoxText" class="text-secondary text-center m-auto p-5">Drag and drop file or folder here</p>
+          <div id="tooltip">
+            Only single folder or file accepted.
+          </div>
+        </div>
+
+        
+        <!-- Output Folder Label / Button -->
+        <div class="row text-secondary">
+          <div class="col col-4">
+            <label for="outPathButton" class="form-label p-2" >Output Folder: </label>
+          </div>
+          <div class="col">
+            <button id="outPathButton" type="button" class="form-control btn btn-sm btn-dark p-2 text-secondary"> Select </button>
+          </div>
+        </div>
+
+        <!-- Choose Operation -->
+        <select id="operationType" class="form-select bg-dark text-light" aria-label="Select Operation Type">
+          <option selected disabled>Choose Operation...</option>
+          <option value="merge">Merge</option>
+          <option value="split">Split</option>
+          <option value="conform">Conform</option>
+          <option value="convert">Convert</option>
+        </select>
+
+        <!-- Submit button -->
+        <div class="container my-5 pb-3 text-center">
+          <button id="submitButton" class="btn btn-primary" >Begin Operation</button>
+        </div>
+      </form>
+
+      <!-- Modal -->
+      <div class="modal fade text-light" id="messageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-dark">
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">OPERATION STARTED</h1>
+              <!-- <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+              WAIT FOR OPERATION TO FINISH...
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- OUTPUT BOX -->
+      <label for="outputBox" class="form-label p-2">Output:</label>
+      <div id="outputBox" class="text-start output-box bg-dark border-top border-bottom rounded mt-3 p-3" style="height: 150px;">
+        <pre id="outputText" class="pre-wrap">Check here for operation details...</pre>
+      </div>
+
+  </body>
+</html>
