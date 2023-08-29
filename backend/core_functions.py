@@ -1,6 +1,6 @@
 import os
 import shutil
-from plumbum import local
+from plumbum import local   # needs pip install
 from constants import CH_LAYOUT_COMP, CH_SMPTE_COMP
 from helpers import get_bin_path, smpte_order_key, SoundFilesUtils, get_audio_info, validate_paths
 from pathlib import Path
