@@ -2,6 +2,7 @@
 node_modules/
 
 # Ignore build and compiled files
-/build/
-/dist/
-backend/bin/
+**/build/
+**/dist/
+**/bin/
+**/__pycache__/
