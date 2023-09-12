@@ -4,4 +4,4 @@ node_modules/
 # Ignore build and compiled files
 /build/
 /dist/
-backend/bin/
+/bin/
