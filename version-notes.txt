@@ -32,7 +32,8 @@ WHEN PACKAGING
 --------------
 - Ensure Developer Mode is disabled in main.js "isDev"
 - Ensure main.js paths are correctly referencing the files
-- Package python file using "pyinstall project.py --onedir 
+- Package python file using "pyinstaller --onedir audio_operations.py"
   and then move it to "dist folder" along with the "bin" folder
+  - If you want --onefile, ensure get_root_dir() in helpers.py has sys.executable selected an not __file__
 - Update build.js and package.json before using Electron-packager
 - run: node build.js to build program.

@@ -1,3 +1,10 @@
+/*
+ * This file is made to be run using the command "node build.js" in file's directory (root)
+ * After making sure the program works using npm start and that program is not in Dev mode,
+ * run the above command to create platform-specific executable.
+ */
+
+
 const packager = require('electron-packager');
 const path = require('path');
 

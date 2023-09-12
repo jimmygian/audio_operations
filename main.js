@@ -15,14 +15,14 @@ const path = require('path');
 const fs = require('fs');
 const os = require('os');
 // PATHS
-const PYTHONSCRIPTPATH = path.join(__dirname, 'backend', 'audio_operations.py');
-const PYTHONSCRIPTEXEC = path.join(__dirname, 'backend', 'dist', 'audio_operations.exe');
+const PYTHONSCRIPTPATH = path.join(__dirname, 'backend', 'audio_operations', 'audio_operations.py');
+const PYTHONSCRIPTEXEC = path.join(__dirname, 'backend', 'executables', 'audio_operations.exe');
 const INDEX = path.join(__dirname, 'renderer', 'index.html');
 const PRELOADPATH = path.join(__dirname, 'preload.js');
 // CONSTANTS
 const AUDIOEXTENSIONS = ['wav', 'flac', 'ogg', 'aiff', 'aifc', 'mp3', 'aac'];
 const isMac = process.platform === 'darwin'
-const isDev = process.env.NODE_ENV !== 'development'; //CHANGE THIS to "===" when packaging
+const isDev = process.env.NODE_ENV === 'development'; //CHANGE THIS to "===" when packaging
 
 
 
