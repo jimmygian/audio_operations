@@ -15,8 +15,8 @@ const path = require('path');
 const fs = require('fs');
 const os = require('os');
 // PATHS
-const PYTHONSCRIPTPATH = path.join(__dirname, 'backend', 'project.py');
-const PYTHONSCRIPTEXEC = path.join(__dirname, 'backend', 'dist', 'project.exe');
+const PYTHONSCRIPTPATH = path.join(__dirname, 'backend', 'audio_operations.py');
+const PYTHONSCRIPTEXEC = path.join(__dirname, 'backend', 'dist', 'audio_operations.exe');
 const INDEX = path.join(__dirname, 'renderer', 'index.html');
 const PRELOADPATH = path.join(__dirname, 'preload.js');
 // CONSTANTS
