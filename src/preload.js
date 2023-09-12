@@ -1,3 +1,7 @@
+// See the Electron documentation for details on how to use preload scripts:
+// https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
+
+
 /**
  * preload.js - This script serves as a bridge between the main (main.js) Electron process and the renderer (renderer.js) process.
  * It exposes selected modules, functions, and objects to the renderer process for secure communication.

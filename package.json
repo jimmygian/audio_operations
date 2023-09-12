@@ -2,18 +2,32 @@
   "name": "audio_operations",
   "productName": "Audio-Operations",
   "version": "1.0.0",
-  "description": "Basic",
-  "main": "main.js",
+  "description": "An app that modifies audio files.",
+  "main": "src/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
-  "author": "Dimitris Giannoulis",
-  "license": "ISC",
+  "keywords": [],
+  "author": {
+    "name": "Dimitris Giannoulis",
+    "email": "dimitrisgiannoulis.jg@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "toastify-js": "^1.12.0"
   },
   "devDependencies": {
-    "electron": "^26.1.0",
-    "electron-packager": "^17.1.2"
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "26.2.0"
   }
 }
