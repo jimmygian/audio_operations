@@ -1,3 +1,14 @@
+# Dimitris Giannoulis
+
+**Project**: Audio Operations<br>
+**Author**: Dimitris Giannoulis<br>
+**Location**: London, UK<br>
+**Date**: September 13, 2023<br>
+<br>
+<br>
+<br>
+<br>
+
 # Audio Operations
 
 Audio Operations is an Electron-based application that allows users to perform various audio processing operations on sound files. The application interfaces with a Python backend to execute the specified audio operations and provides a user-friendly interface for selecting input files, output paths, and operation types.
